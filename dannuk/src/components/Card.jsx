@@ -1,10 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "motion/react"
 import { useState } from "react"
+import { useNavigate } from "react-router"
 
 
-function Card({ imgLink, title, description, icon, buttonLabel }) {
+function Card({ imgLink, title, description, icon, buttonLabel, link }) {
     const [click, setClick] = useState(false)
+    const navigate = useNavigate()
 
     return (
         <motion.div
@@ -22,6 +24,7 @@ function Card({ imgLink, title, description, icon, buttonLabel }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}
+                loading="lazy"
             />}
             <h1 className='text-4xl mt-2'>{icon}{title}</h1>
             {click && <p
@@ -35,7 +38,8 @@ function Card({ imgLink, title, description, icon, buttonLabel }) {
                 initial={{ opacity: 0 }}
                 whileclick={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="mt-2.5 border-1 p-2 rounded-xl"
+                className="mt-2.5 border-1 p-2 rounded-xl z-10 hover:cursor-pointer"
+                onClick={() => navigate(link)}
             >
                 {buttonLabel}
             </button>}

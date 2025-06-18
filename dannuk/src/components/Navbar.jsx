@@ -6,14 +6,16 @@ function Navbar() {
     //const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="flex mt-2 p-1 w-full">
+        <nav className="flex p-1 bg-teal-500 w-full">
             < div className="flex flex-col items-center md:flex-row md:justify-between w-full" >
+
                 {/* Logo & Text */}
                 <div div className='flex gap-x-5'>
                     <div className="flex flex-col items-center md:flex-row md:items-center md:gap-1">
                         <img src="/logo.png" alt="Dannuk Logo" className="w-24 h-24 lg:w-20 lg:h-20 p-0.5" />
-                        <h1 className="text-teal-500 text-3xl mt-2 md:mt-0">Dannuk</h1>
+                        <h1 className="text-white mt-1 text-3xl md:mt-0">Dannuk</h1>
                     </div>
+
                     {/* Links - hidden on mobile */}
                     <div className="hidden md:flex items-center gap-x-10 pt-1">
                         <Link
