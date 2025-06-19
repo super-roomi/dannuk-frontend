@@ -11,7 +11,7 @@ function Card({ imgLink, title, description, icon, buttonLabel, link }) {
     return (
         <motion.div
             //className={click ? `flex border p-4 flex-1` : `flex border p-4`}
-            className={click ? `relative h-15 w-full border rounded-2xl p-5 items-center text-center` : `relative h-15 w-full border rounded-2xl p-5 items-center text-center`}
+            className={click ? `relative h-15 w-full border rounded-2xl p-5 items-center text-center` : `relative h-15 w-full border rounded-2xl p-5 items-center text-center hover:cursor-pointer`}
             initial={{ scale: 0.9 }}
             animate={{ height: 'auto' }}
             whileTap={{ scale: 0.80 }}
