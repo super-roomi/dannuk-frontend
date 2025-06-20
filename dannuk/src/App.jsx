@@ -1,7 +1,8 @@
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
+import HomePage from './pages/HomePage'
 import { Router, Route, Routes } from 'react-router'
 import { BrowserRouter } from 'react-router'
+import LoginPage from './pages/LoginPage'
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   )

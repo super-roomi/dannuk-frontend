@@ -1,9 +1,10 @@
 import { Link } from 'react-router'
 //import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router'
 
 function Navbar() {
     //const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <nav className="flex p-1 bg-teal-500 w-full">
@@ -12,7 +13,7 @@ function Navbar() {
                 {/* Logo & Text */}
                 <div div className='flex gap-x-5'>
                     <div className="flex flex-col items-center md:flex-row md:items-center md:gap-1">
-                        <img src="/logo.png" alt="Dannuk Logo" className="w-24 h-24 lg:w-20 lg:h-20 p-0.5" />
+                        <img onClick={() => navigate('/')} src="/logo.png" alt="Dannuk Logo" className="w-24 h-24 lg:w-20 lg:h-20 p-0.5 hover:cursor-pointer" />
                         <h1 className="text-white mt-1 text-3xl md:mt-0">Dannuk</h1>
                     </div>
 
@@ -47,8 +48,9 @@ function Navbar() {
 
                 {/* Login - hidden on mobile */}
                 < div className="hidden md:flex items-center gap-x-2 mt-4 md:mt-0 mr-3" >
-                    <button className="underline p-1 border rounded-full px-4 backdrop-blur-2xl">Login</button>
+                    <button onClick={() => navigate('/login')} className="underline p-1 border rounded-full px-4 backdrop-blur-2xl">Login</button>
                 </ div>
+
                 {/* Burgah icon */}
                 {/* <div className="md:hidden">
                     <button onClick={() => setMenuOpen(!menuOpen)} className="text-teal-800">
