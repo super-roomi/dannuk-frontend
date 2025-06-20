@@ -2,25 +2,33 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react'
+import { Link } from 'react-router'
 
 function LoginPage() {
     return (
         <>
             <Navbar />
 
-            <motion.div className='lg:mx-125 flex flex-col lg:mt-25 mt-5 bg-teal-500 p-8 m-5 rounded-3xl text-white'>
-                <h1 className='text-4xl text-center'>Welcome back!</h1>
+            {/* TODO: Fix phone validation (pattern)*/}
 
-                <form action="" method='POST'>
-                    <div className='flex flex-col mx-5'>
-                        <label htmlFor="">Phone number:</label>
-                        <input name='phone number' id='phone number' title='7XXXXXXXXX' pattern="7\d{9}" type="tel" className='border rounded' maxLength={10} required inputMode='numeric' />
-                        <label htmlFor="">Password:</label>
-                        <input name='password' id='password' type="password" className='border rounded' />
-                        <button type='submit' className='mt-5 border rounded-2xl mx-35 text-white bg-teal-500 p-1 hover:pointer'>Log in</button>
-                    </div>
-                </form>
-            </motion.div>
+            <div className='flex justify-center items-center min-h-screen'>
+                <motion.div className='flex justify-center flex-col bg-teal-500 p-8 rounded-3xl text-white min-w-150 max-w-210'>
+                    <h1 className='text-4xl text-center'>Welcome back!</h1>
+                    <form action="" method='POST'>
+                        <div className='flex flex-col mx-5 gap-y-0.5'>
+                            <label htmlFor="" className='mt-4'>Phone number:</label>
+                            <input name='phone number' id='phone number' title='7XXXXXXXXX' pattern="7\d{9}" type="tel" className='border rounded' maxLength={10} required inputMode='numeric' />
+                            <label htmlFor="">Password:</label>
+                            <input name='password' id='password' type="password" className='border rounded' />
+                            <div className='flex flex-col items-center w-full'>
+                                <button type='submit' className='mt-5 border rounded-2xl  text-white bg-teal-500 p-1 hover:cursor-pointer hover:scale-104 active:scale-100 transition-all min-w-30 max-w-40'>Login</button>
+                                <Link to={'/register'} className='underline mt-2'>No Account?</Link>
+                                <Link to={'/'} className='underline mt-2'>Forgot Password?</Link>
+                            </div>
+                        </div>
+                    </form>
+                </motion.div>
+            </div>
         </>
     )
 }

@@ -2,14 +2,16 @@ import Navbar from '../components/Navbar'
 import Card from '../components/Card'
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react'
+import { useNavigate } from 'react-router'
 
 
 function Home() {
+    const navigate = useNavigate()
     return (
         <>
-            <div className='min-h-screen flex flex-col justify-between'>
+            <div className='min-h-screen flex flex-col justify-between overflow-x-hidden'>
                 <Navbar />
-                <section className='flex flex-row rounded-2xl p-2 mx-4 md:mx-8 md:p-6 overflow-hidden'>
+                <section className='flex flex-row rounded-2xl p-2 mx-4 md:mx-8 md:p-6'>
                     <div className='flex flex-col p-4 flex-1 ml-3 lg:mt-2 md:mt-19 sm:mt-2'>
                         <div>
                             <h1 className='lg:text-6xl text-6xl mt-2.5 '>The <span className='text-teal-500'>one stop</span> for all your <span className='text-teal-500'>needs.</span></h1>
@@ -17,7 +19,7 @@ function Home() {
                         </div>
                         <div className='flex gap-x-2 mt-2'>
                             <button className='border w-28 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Explore</button>
-                            <button className='border w-28 bg-teal-500 p-2 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Get started!</button>
+                            <button onClick={() => navigate('/register')} className='border w-28 bg-teal-500 p-2 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Get started!</button>
                         </div>
                         <div>
                             <p className='text-3xl lg:mt-45 md:mt-35 mt-28'>Join the most comprehensive business accelerator in Iraq!</p>
@@ -26,7 +28,7 @@ function Home() {
                     {/* <div className='border overflow-x-hidden'>
                         <img src="/logo.png" alt="" className='absolute bottom-0 -right-84 z-1 h-svh animate-spin duration-500' style={{ animationDuration: '30s' }} />
                     </div> */}
-                    <img src="/logo.png" alt="" className='-right-76  h-140 w-140 animate-spin lg:block lg:relative hidden' style={{ animationDuration: '30s' }} />
+                    <img src="/logo.png" alt="" className='-right-86  h-140 w-140 animate-spin lg:block lg:relative hidden' style={{ animationDuration: '30s' }} />
                 </section>
 
                 {/* Mobile-only cards */}

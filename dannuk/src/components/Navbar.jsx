@@ -7,8 +7,8 @@ function Navbar() {
     const navigate = useNavigate();
 
     return (
-        <nav className="flex p-1 bg-teal-500 w-full">
-            < div className="flex flex-col items-center md:flex-row md:justify-between w-full" >
+        <nav className="relative p-1 bg-teal-500 w-full">
+            <div className="flex flex-col items-center md:flex-row md:justify-between w-full" >
 
                 {/* Logo & Text */}
                 <div div className='flex gap-x-5'>
@@ -18,7 +18,7 @@ function Navbar() {
                     </div>
 
                     {/* Links - hidden on mobile */}
-                    <div className="hidden md:flex items-center gap-x-10 pt-1">
+                    <div className="hidden md:flex items-center gap-x-10 pt-1 text-white">
                         <Link
                             to={{
                                 pathname: "/get-known",
@@ -48,7 +48,7 @@ function Navbar() {
 
                 {/* Login - hidden on mobile */}
                 < div className="hidden md:flex items-center gap-x-2 mt-4 md:mt-0 mr-3" >
-                    <button onClick={() => navigate('/login')} className="underline p-1 border rounded-full px-4 backdrop-blur-2xl">Login</button>
+                    <button onClick={() => navigate('/login')} className="underline p-1 border rounded-full px-4 text-white hover:scale-104 hover:cursor-pointer active:scale-100">Login</button>
                 </ div>
 
                 {/* Burgah icon */}
