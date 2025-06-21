@@ -14,12 +14,12 @@ function Home() {
                 <section className='flex flex-row rounded-2xl p-2 mx-4 md:mx-8 md:p-6'>
                     <div className='flex flex-col p-4 flex-1 ml-3 lg:mt-2 md:mt-19 sm:mt-2'>
                         <div>
-                            <h1 className='lg:text-6xl text-6xl mt-2.5 '>The <span className='text-teal-500'>one stop</span> for all your <span className='text-teal-500'>needs.</span></h1>
-                            <h1 className="lg:text-4xl text-3xl mt-2.5">More suff here.</h1>
+                            <h1 className='lg:text-6xl text-6xl mt-2.5 leading-18'>The <span className='text-teal-500'>one stop</span> for all your <span className='text-teal-500'>needs.</span></h1>
+                            <h1 className="lg:text-4xl text-3xl mt-2.5">More stuff here.</h1>
                         </div>
                         <div className='flex gap-x-2 mt-2'>
                             <button className='border w-28 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Explore</button>
-                            <button onClick={() => navigate('/register')} className='border w-28 bg-teal-500 p-2 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Get started!</button>
+                            <button onClick={() => navigate('/register')} className='border text-white w-28 bg-teal-600 p-2 rounded-xl mt-2 click:scale-104 active:scale-98 duration-150'>Get started!</button>
                         </div>
                         <div>
                             <p className='text-3xl lg:mt-45 md:mt-35 mt-28'>Join the most comprehensive business accelerator in Iraq!</p>

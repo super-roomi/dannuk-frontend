@@ -11,8 +11,8 @@ function LoginPage() {
 
             {/* TODO: Fix phone validation (pattern)*/}
 
-            <div className='flex justify-center items-center min-h-screen'>
-                <motion.div className='flex justify-center flex-col bg-teal-500 p-8 rounded-3xl text-white min-w-150 max-w-210'>
+            <div className='flex justify-center items-center min-h-screen border'>
+                <motion.div className='flex justify-center flex-col bg-teal-500 p-8 rounded-3xl text-white md:min-w-150 md:max-w-210 h-110 w-92'>
                     <h1 className='text-4xl text-center'>Welcome back!</h1>
                     <form action="" method='POST'>
                         <div className='flex flex-col mx-5 gap-y-0.5'>
